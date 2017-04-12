@@ -1,0 +1,19 @@
+
+h1 {
+  color: #4AF2A1;
+  background-color: black;
+  border: 1px solid black;
+}
+
+p {
+  font: 36px sans-serif;
+  color: purple;
+}
+
+li {
+  color: blue;
+}
+
+li:nth-child(even) {
+  color: red;
+}

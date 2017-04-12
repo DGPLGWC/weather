@@ -1,16 +1,12 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
-    return 'Hello Girls Who Code!'
-
-@app.route('/hello/<string:name>')
-def hello(name):
     return render_template(
-        'helloname.html', name=name)
+        'index.html')
+
 
 app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
