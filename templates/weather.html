@@ -1,30 +1,38 @@
 <html>
+
 <head>
     <title>Website</title>
-<style>
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
- 
-body{
-    text-align: center;    
-}
-h1{
-    font-family: 'Amatic SC', cursive;
-    font-weight: normal;
-    color: #FF0000;
-    font-size: 2.5em;
-}
- 
-</style>
- 
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-weight: normal;
+            color: #FF0000;
+            font-size: 2.5em;
+        }
+    </style>
+
 </head>
+
 <body>
     <div class="block1">
-    <h1>Hello Girls Who Code!</h1>
-      <h2>The Tempature in Chicago is: </h2>
-      <p>
-         65 degrees and Sunny in Feburary!
-      </p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfctQdAqFFxFl5shw2jZFy5VBC3HTE4AsFTLAZD8hO1iAbF3fKz7QFCg">
+        <h1>Hello Girls Who Code!</h1>
+        <h2>The temperature in {{ location }} is: </h2>
+        <p>
+            {{ temp }} degrees and {{ description }} in {{ month }}!
+        </p>
+        {% if description == 'sunny' %}
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfctQdAqFFxFl5shw2jZFy5VBC3HTE4AsFTLAZD8hO1iAbF3fKz7QFCg" width="740" height="382" /> 
+        {% elif description == 'overcast' %}
+          <img src="http://icons.iconarchive.com/icons/icons-land/weather/256/Overcast-icon.png" width="740" height="382" />        
+        {% elif description == 'rain' %}
+          <img src="http://www.clipartbest.com/cliparts/eTM/dx6/eTMdx6Rjc.png" width="740" height="382" />        
+        {% endif %}
     </div>
 </body>
+
 </html>

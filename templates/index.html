@@ -1,18 +1,20 @@
 <html>
-  
-  <head>
-    <title>Weather Example</title>
-  </head>
-  <body>
-    <h1>Welcome to my Weather App</h1>
-    <h2> Hello GWC </h2>
-    <p>Description: I will tell you the weather today!</p>
-  
-    <ul>
-      <li>cold</li>
-      <li>hot</li>
-    </ul>
-  </body>
-  <img src="../static/image/sunburn300.png" >
-  <link href="../static/css/mycss.css" rel="stylesheet" type="text/css">
+
+<head>
+  <title>Weather Example</title>
+</head>
+
+<body>
+  <h1>Welcome to my Weather App</h1>
+  <p>What is the weather?</p>
+  <!-- By adding a form action, the form data is sent to '/get-weather' route on the server for processing -->
+  <form action="/get-weather">
+    <input type="text" name="location" placeholder="location" style="border:1px dotted grey; border-radius:5px; padding:5px;">
+    <input type="submit" class="btn btn-default" style="border:none; border-radius:5px; padding:8px; margin-left:15px; font-size:12px;">
+  </form>
+
+</body>
+<img src="../static/image/sunburn300.png">
+<link href="../static/css/mycss.css" rel="stylesheet" type="text/css">
+
 </html>
