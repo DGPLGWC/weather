@@ -8,9 +8,9 @@
   <h1>Welcome to my Weather App</h1>
   <p>What is the weather?</p>
   <!-- By adding a form action, the form data is sent to '/get-weather' route on the server for processing -->
-  <form action="/get-weather">
-    <input type="text" name="location" placeholder="location" style="border:1px dotted grey; border-radius:5px; padding:5px;">
-    <input type="submit" class="btn btn-default" style="border:none; border-radius:5px; padding:8px; margin-left:15px; font-size:12px;">
+  <form action='/get-weather' method="POST">
+    <input type="text" name="city" placeholder="city" style="border:1px dotted grey; border-radius:5px; padding:5px;">
+    <input type="submit" value="Go" class="btn btn-default" style="border:none; border-radius:5px; padding:8px; margin-left:15px; font-size:12px;">
   </form>
 
 </body>
